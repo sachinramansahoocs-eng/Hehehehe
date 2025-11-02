@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Happy Birthday Sthitilragna 💋</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+  :root{--bg:#fef6f8;--accent:#ff6b9a;--soft:#fff0f3}
+  *{box-sizing:border-box;font-family:Poppins,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;}
+  body{margin:0;background:linear-gradient(180deg,#fff 0%,#fff7fb 100%);color:#222}
+  .container{max-width:980px;margin:30px auto;padding:20px}
+  .card{background:linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,250,252,0.9));border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,0.08);overflow:hidden;padding:0}
+  .hero{position:relative;height:540px;background:#000;border-bottom:8px solid rgba(0,0,0,0.04)}
+  .hero img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.95) saturate(1.05)}
+  .overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:28px;background:linear-gradient(180deg,transparent, rgba(0,0,0,0.45));color:#fff}
+  h1{margin:0;font-size:36px;letter-spacing:0.4px;text-shadow:0 4px 18px rgba(0,0,0,0.45)}
+  .sub{font-size:18px;opacity:0.95;margin-top:6px}
+  .message{padding:28px 32px;background:linear-gradient(180deg,#fff,#fff);display:flex;gap:24px;align-items:center}
+  .message .photo{width:140px;height:140px;border-radius:12px;overflow:hidden;flex-shrink:0;box-shadow:0 8px 20px rgba(0,0,0,0.06)}
+  .message .photo img{width:100%;height:100%;object-fit:cover}
+  .message .text{flex:1}
+  .message p{margin:0;font-size:18px;line-height:1.5;color:#333}
+  .heart{color:var(--accent);font-weight:700}
+  .gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:22px}
+  .gallery img{width:100%;height:220px;object-fit:cover;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.06);transition:transform .35s ease}
+  .gallery img:hover{transform:scale(1.03)}
+  .btns{display:flex;gap:12px;margin:18px;padding:0 24px 28px}
+  .btn{background:var(--accent);color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:600;box-shadow:0 8px 18px rgba(255,107,154,0.18);border:none;cursor:pointer}
+  .footer{padding:18px 28px;border-top:1px dashed rgba(0,0,0,0.06);display:flex;justify-content:space-between;align-items:center}
+  .from{font-weight:600;color:#444}
+  /* floating hearts animation */
+  .hearts{position:fixed;left:0;top:0;right:0;bottom:0;pointer-events:none;overflow:hidden}
+  .hearts i{position:absolute;display:block;opacity:0.9;font-size:20px;animation:floatUp linear infinite; transform-origin:center}
+  @keyframes floatUp{
+    from{transform:translateY(30vh) scale(0.6);opacity:0}
+    10%{opacity:1}
+    to{transform:translateY(-20vh) scale(1.1);opacity:0}
+  }
+  /* responsive */
+  @media (max-width:720px){
+    .hero{height:420px}
+    .message{flex-direction:column;align-items:flex-start}
+    .message .photo{width:120px;height:120px}
+    .gallery img{height:160px}
+  }
+</style>
+</head>
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<div class="container">
+  <div class="card">
+    <div class="hero" id="hero">
+      <!-- Replace 'main.jpg' with the middle photo you uploaded (filename: main.jpg) -->
+      <img id="heroImg" src="main.jpg" alt="Sthitilragna">
+      <div class="overlay">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+          <div>
+            <h1>Happy Birthday, <span class="heart">Sthitilragna 💋</span></h1>
+            <div class="sub">3 November 2005 — My favourite person</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="message">
+      <div class="photo"><img id="thumb" src="main.jpg" alt="hero thumb"></div>
+      <div class="text">
+        <p><strong>To mo dhana 💋, Happy Birthday💋!</strong><br><br>
+        Thank you for being my partner, my best friend, and my greatest adventure. I cherish every moment we've shared and I'm so excited for all the ones to come. God bless you!<br><br>
+        <em style="color:var(--accent)">— From Sachin 💖</em></p>
+      </div>
+    </div>
+
+    <div style="padding:0 22px 8px">
+      <h3 style="margin:8px 0 12px;font-weight:600">Cute & funny photos</h3>
+      <div class="gallery">
+        <!-- Replace these files with your two funny photos (filenames: fun1.jpg and fun2.jpg) -->
+        <img src="fun1.jpg" alt="fun1">
+        <img src="fun2.jpg" alt="fun2">
+      </div>
+    </div>
+
+    <div class="btns">
+      <button class="btn" id="revealBtn">Tap to Reveal 🎉</button>
+      <a class="btn" id="downloadBtn" download="Sthitilragna_birthday.html">Download</a>
+    </div>
+
+    <div class="footer">
+      <div class="from">With all my love — Sachin 💖</div>
+      <div style="opacity:0.7;font-size:14px">Made with ❤️ for Sthitilragna</div>
+    </div>
+  </div>
+</div>
+
+<!-- Optional audio: place an 'instrumental.mp3' file in same folder for background music -->
+<audio id="bgAudio" loop>
+  <source src="instrumental.mp3" type="audio/mpeg">
+  <!-- If you don't have the mp3, audio will be silent. -->
+</audio>
+
+<script>
+// floating hearts generator
+const heartsContainer = document.getElementById('hearts');
+function makeHeart(){
+  const i = document.createElement('i');
+  i.textContent = '💖';
+  const size = Math.random()*18 + 14;
+  i.style.fontSize = size + 'px';
+  i.style.left = (Math.random()*100) + '%';
+  i.style.animationDuration = (6 + Math.random()*6) + 's';
+  i.style.opacity = Math.random()*0.6 + 0.4;
+  heartsContainer.appendChild(i);
+  setTimeout(()=> i.remove(), 12000);
+}
+setInterval(makeHeart, 700);
+
+// Reveal animation
+const revealBtn = document.getElementById('revealBtn');
+revealBtn.addEventListener('click', () => {
+  // small confetti-like effect using hearts
+  for(let k=0;k<18;k++) makeHeart();
+  // play audio if available
+  const a = document.getElementById('bgAudio');
+  if(a && a.paused){ a.play().catch(()=>{}); }
+  revealBtn.textContent = 'Happy Birthday 🎂';
+  revealBtn.disabled = true;
+});
+
+// Download button -> saves current HTML by creating a blob
+document.getElementById('downloadBtn').addEventListener('click', ()=>{
+  const html = `<!doctype html>` + document.documentElement.innerHTML;
+  const blob = new Blob([html], {type: 'text/html'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'Sthitilragna_birthday.html';
+  a.click();
+  URL.revokeObjectURL(url);
+});
+
+// Small instruction if images missing: show gentle placeholders
+function checkImages(){
+  const imgs = document.querySelectorAll('img');
+  imgs.forEach(img=>{
+    img.onerror = ()=> {
+      // set a soft gradient placeholder
+      img.style.background = 'linear-gradient(135deg,#ffdfe8,#fff7fb)';
+      img.src = 'data:image/svg+xml;utf8,' + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"><rect width="100%" height="100%" fill="#fff7fb"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="24" fill="#ff6b9a">Replace with your photo (main.jpg / fun1.jpg / fun2.jpg)</text></svg>`);
+    };
+  });
+}
+checkImages();
+</script>
+
+</body>
+</html>
